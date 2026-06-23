@@ -217,6 +217,44 @@
       animation: fade-up 0.7s ease 0.32s both;
     }
 
+    /* ── PROFILE PHOTO ── */
+    .hero-photo {
+      width: 130px; height: 130px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      position: relative;
+      animation: fade-up 0.7s ease both;
+    }
+    .hero-photo::before {
+      content: '';
+      position: absolute; inset: -3px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-light), var(--accent));
+      z-index: -1;
+      animation: spin-ring 6s linear infinite;
+    }
+    .hero-photo::after {
+      content: '';
+      position: absolute; inset: -8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-light), var(--accent));
+      opacity: 0.25;
+      z-index: -2;
+      filter: blur(10px);
+    }
+    .hero-photo img {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+      border: 3px solid var(--bg);
+      display: block;
+    }
+    @keyframes spin-ring {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
     /* ── BUTTONS ── */
     .btn {
       display: inline-flex; align-items: center; gap: 0.5rem;
@@ -501,7 +539,7 @@
     <li><a href="#experience" onclick="closeNav()">Experience</a></li>
     <li><a href="#education"  onclick="closeNav()">Education</a></li>
     <li><a href="#contact"    onclick="closeNav()">Contact</a></li>
-    <li><a href="https://github.com/sakshfr/resume/raw/main/Saksham_CV.pdf"
+    <li><a href="https://github.com/sakshfr/portfolio/raw/main/resume.pdf"
            class="nav-cta" onclick="closeNav()">Download CV</a></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" onclick="toggleNav()" aria-label="Toggle menu">
@@ -516,6 +554,10 @@
   <div class="orb orb-orange"></div>
 
   <div class="hero-inner">
+    <div class="hero-photo">
+      <img src="https://github.com/sakshfr/portfolio/raw/main/sakshfrpfp.png"
+           alt="Saksham Aggarwal" />
+    </div>
     <div class="hero-badge">
       <div class="badge-dot"></div>
       Open to opportunities
@@ -760,7 +802,7 @@
   </div>
 
   <div class="cta-center reveal">
-    <a href="https://github.com/sakshfr/resume/raw/main/Saksham_CV.pdf"
+    <a href="https://github.com/sakshfr/portfolio/raw/main/resume.pdf"
        class="btn btn-primary" download>
       <i class="fas fa-file-pdf"></i>&nbsp; Download Full Resume
     </a>
