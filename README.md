@@ -84,7 +84,7 @@ My goal is to contribute to collaborative efforts that drive real-world success 
 
 > Download my full resume as a PDF:
 >
-> **[⬇️ Click here to download Saksham_CV.pdf](https://github.com/sakshfr/resume/raw/main/Saksham_CV.pdf)**
+> **[⬇️ Click here to download Saksham_CV.pdf](https://github.com/sakshfr/portfolio/raw/main/resume.pdf)**
 
 ---
 
